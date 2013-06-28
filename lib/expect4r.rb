@@ -4,6 +4,7 @@ require 'misc/passwd'
 
 module Expect4r
 
+  autoload :Nexus,  'router/cisco/nexus/nexus'
   autoload :Iox,    'router/cisco/iox/iox'
   autoload :Ios,    'router/cisco/ios/ios'
   autoload :J,      'router/juniper/junos/junos'
@@ -29,6 +30,9 @@ module Expect4r
     module Ios
       autoload :TermServer, 'router/cisco/ios/termserver'
       autoload :Modes, 'router/cisco/ios/modes'
+    end
+    module Nexus
+      autoload :Modes, 'router/cisco/nexus/modes'
     end
     module Iox
       autoload :Modes, 'router/cisco/iox/modes'
