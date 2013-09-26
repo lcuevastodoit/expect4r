@@ -31,7 +31,7 @@ class Expect4r::Nexus < ::Expect4r::BaseLoginObject
 
   def putline(line,*args)
     output, rc = super
-    raise SyntaxError.new(self.class.to_s, line) if output.join =~ /\% Invalid command at|No token match at|\% Invalid Value at/
+    raise SyntaxError.new(self.class.to_s, line) if output.join =~ /\% Invalid command at|No token match at/
     output
   end
 
